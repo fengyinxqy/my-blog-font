@@ -1,0 +1,32 @@
+// 引入清楚全局默认样式
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-js-ct {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.js-ct {
+  justify-content: center;
+}
+
+.al-ct {
+  align-items: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
