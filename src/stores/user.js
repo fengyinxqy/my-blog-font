@@ -5,7 +5,8 @@ export const useUserStore = defineStore({
   id: 'myStore',
   state: () => ({
     userInfo: JSON.parse(localStorage.getItem('userInfo')) || {},
-    isLogin: !!Cookies.get('token')
+    isLogin: !!Cookies.get('token'),
+    role: 0
     // your state properties
   }),
   actions: {
@@ -17,6 +18,9 @@ export const useUserStore = defineStore({
     },
     setLoginStatus (isLogin) {
       this.isLogin = isLogin
+    },
+    setUserRoleInfo (role) {
+      this.role = role
     }
   }
 })

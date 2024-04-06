@@ -7,14 +7,11 @@
       <div class="flex justify-center">
         <el-avatar
           :size="120"
-          :src="circleUrl"
+          :src="userInfo.avatar"
         />
       </div>
       <div class="flex justify-center username pt-8">
-        且听风吟
-      </div>
-      <div class="flex justify-center">
-        越努力越幸运
+        {{ userInfo.username }}
       </div>
     </el-card>
   </div>
@@ -22,6 +19,8 @@
 
 <script>
 import avatarImg from '@/assets/img/avatar.jpg'
+import { mapState } from 'pinia'
+import { useUserStore } from '@/stores/user'
 export default {
   name: 'PersonalCard',
 
@@ -29,6 +28,10 @@ export default {
     return {
       circleUrl: avatarImg
     }
+  },
+
+  computed: {
+    ...mapState(useUserStore, ['userInfo'])
   },
 
   mounted () {

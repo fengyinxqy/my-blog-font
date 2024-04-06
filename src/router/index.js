@@ -29,6 +29,34 @@ const router = createRouter({
           path: '/edit',
           name: 'Edit',
           component: () => import('../views/article/article-edit.vue')
+        },
+        {
+          path: '/chat',
+          name: 'ChatRoom',
+          component: () => import('../views/chat/chat-room.vue')
+        }
+      ]
+    },
+    {
+      path: '/admin',
+      name: 'Admin',
+      redirect: '/admin/home',
+      component: () => import('../views/manage/manage-view.vue'),
+      children: [
+        {
+          path: '/admin/home',
+          name: 'Admin',
+          component: () => import('../views/manage/index.vue')
+        },
+        {
+          path: '/admin/article',
+          name: 'AdminArticle',
+          component: () => import('../views/manage/article-manage.vue')
+        },
+        {
+          path: '/admin/user',
+          name: 'AdminUser',
+          component: () => import('../views/manage/user-manage.vue')
         }
       ]
     },

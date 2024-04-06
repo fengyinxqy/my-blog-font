@@ -73,7 +73,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-::v-deep .el-descriptions--small .el-descriptions__header{
+:deep .el-descriptions--small .el-descriptions__header{
   margin-bottom: 0;
 }
 </style>

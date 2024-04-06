@@ -35,6 +35,11 @@ export default ({ mode }) => {
         '/api': {
           target: apiBaseUrl,
           changeOrigin: true
+        },
+        '/ws': {
+          target: 'ws://127.0.0.1:7001',
+          changeOrigin: true,
+          ws: true
         }
       }
     }
